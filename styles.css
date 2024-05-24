@@ -1,37 +1,76 @@
-@import "styles.css" print, screen; 
-@import url("styles.css") tty;
-media="screen, print,tty"  
+@import url('imported-styles.css');
+h1, h2, p {
+    padding: 0;
+    margin: 0;
+    font: 1em/1.33 Verdana, sans-serif;
+  }
+  h1, h2 {
+    color: red;
+  }
+  /* Task 1: Set font size for h1 to 16pt and h2 to 14pt */
+  h1 {
+    font-size: 1.33em; /* 16pt */
+  }
+  h2 {
+    font-size: 1.17em; /* 14pt */
+  }
+  /* Task 2: Add bottom margin to paragraph tags */
+  p {
+    margin: 0 0 0.5em 0; /* 0.5em bottom margin */
+  }
+  /* Task 3: Add margins to h1 and h2 */
+  h1, h2 {
+    margin: 0.83em 0 0.17em 0; /* 10pt top, 2pt bottom */
+  }
+  /* Task 4: Style the first paragraph to be larger */
+  p:first-of-type {
+    font: 1.17em/1.33 Verdana, sans-serif; /* corrected the font size */
+  }
+  /* Task 5: Indent all paragraphs except the first one */
+  p {
+    text-indent: 5em; /* Indent all paragraphs by 5em */
+  }
+  p.first, p + p {
+    text-indent: 0; /* Remove indent for the first paragraph after a heading */
+  }
 
-@media screen, print, projector {  
-  body {  
-    color: black;  
-    background-color: yellow;  
-  }  
-}
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Experiments with CSS</title>
-  <link rel="stylesheet" type="text/css" href="style.css" media="screen" title="Basic" />
-</head>
-<body>
-  <div id="wrapper">
-    <h1>Big page heading</h1>
-    <p class="introduction first">This is the introductory paragraph.</p>
-    <p>Another paragraph waffling on about something, my favourite TV show, for three or four sentences.</p>
-
-    <div id="films">
-      <h2><strong>A simple subhead:</strong> Films</h2>
-      <p class='recent first'>A short discussion of the last three films I saw.</p>
-      <p>A discussion about my least favourite film</p>
-
-      <div class="movieQuote">
-        <blockquote>
-          <p> "May the Force be with you." </p>
-          <p class="source">XXX</p>
-        </blockquote>
-      </div> <!-- end of movieQuote div -->
-    </div> <!-- end of div#films -->
-  </div><!-- end of div#wrapper -->
-</body>
-</html>
+  :root {
+    --base-font-color: rgb(131, 148, 150);
+    --secondary-font-color: rgb(88, 110, 117);
+    --emphasised-font: rgb(147, 161, 161);
+  
+    --c-background-color: rgb(0, 43, 54);
+    --c-background-highlights: rgb(7, 54, 66);
+  
+    --c-yellow: rgb(181, 137, 0);
+    --c-orange: rgb(203, 75, 22);
+    --c-red: rgb(220, 50, 47);
+    --c-magenta: rgb(211, 54, 130);
+    --c-violet: rgb(108, 113, 196);
+    --c-blue: rgb(38, 139, 210);
+    --c-cyan: rgb(42, 161, 152);
+    --c-green: rgb(133, 153, 0);
+  }
+  
+  body {
+    background-color: var(--c-background-color);
+    color: var(--base-font-color);
+  }
+  
+  header, footer {
+    background-color: var(--c-background-highlights);
+    color: var(--base-font-color);
+  }
+  
+  main {
+    color: var(--base-font-color);
+  }
+  
+  article a {
+    color: var(--c-magenta);
+  }
+  
+  article a:hover {
+    color: var(--c-orange);
+  }
+  
