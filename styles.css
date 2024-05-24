@@ -55,22 +55,45 @@ h1, h2, p {
   body {
     background-color: var(--c-background-color);
     color: var(--base-font-color);
+    max-width: 800px;
+    margin: 0 auto;
   }
   
   header, footer {
     background-color: var(--c-background-highlights);
     color: var(--base-font-color);
+    text-align: center;
+    font-size: 150%;
+    color: var(--c-yellow);
   }
   
   main {
     color: var(--base-font-color);
+    display: flex;
   }
   
-  article a {
-    color: var(--c-magenta);
+  article {
+    border: 3px solid var(--c-cyan);
+    padding: 10px;
+    padding-top: 50px;
+    flex: 1;
   }
   
-  article a:hover {
-    color: var(--c-orange);
+  article h2,
+  article h3 {
+    padding-top: 50px;
+  }
+  
+  aside {
+    color: var(--c-green);
+    width: 30%; /* Adjust as needed */
+  }
+  
+  aside a {
+    color: var(--c-red);
+  }
+  
+  aside a:hover {
+    color: var(--c-blue);
   }
   
