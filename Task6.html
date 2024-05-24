@@ -1,0 +1,29 @@
+@import "styles.css" print, screen; 
+@import url("styles.css") tty;
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experiments with CSS</title>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" title="Basic" />
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Big page heading</h1>
+    <p class="introduction first">This is the introductory paragraph.</p>
+    <p>Another paragraph waffling on about something, my favourite TV show, for three or four sentences.</p>
+
+    <div id="films">
+      <h2><strong>A simple subhead:</strong> Films</h2>
+      <p class='recent first'>A short discussion of the last three films I saw.</p>
+      <p>A discussion about my least favourite film</p>
+
+      <div class="movieQuote">
+        <blockquote>
+          <p> "May the Force be with you." </p>
+          <p class="source">XXX</p>
+        </blockquote>
+      </div> <!-- end of movieQuote div -->
+    </div> <!-- end of div#films -->
+  </div><!-- end of div#wrapper -->
+</body>
+</html>
