@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experiments with CSS</title>
+  <style type='text/css'>
+    h1, h2, p {
+      padding: 0;
+      margin: 0;
+      font: 1em/1.33 Verdana, sans-serif;
+    }
+    h1, h2 {
+      color: red;
+    }
+    h1 {
+      font-size: 1.33em; /* 16pt */
+    }
+    h2 {
+      font-size: 1.17em; /* 14pt */
+    }
+    p {
+      margin: 0 0 0.5em 0; /* 0.5em bottom margin */
+    }
+    h1, h2 {
+      margin: 0.83em 0 0.17em 0; /* 10pt top, 2pt bottom */
+    }
+    p:first-of-type {
+      font: 0.17em/1.33 Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Big page heading</h1>
+    <p class="introduction">This is the introductory paragraph.</p>
+    <p>Another paragraph waffling on about something, my favourite TV show, for three or four sentences.</p>
+
+    <div id="films">
+      <h2><strong>A simple subhead:</strong> Films</h2>
+      <p class='recent'>A short discussion of the last three films I saw.</p>
+      <p>A discussion about my least favourite film</p>
+
+      <div class="movieQuote">
+        <blockquote>
+          <p> "May the Force be with you." </p>
+          <p class="source">XXX</p>
+        </blockquote>
+      </div> <!-- end of movieQuote div -->
+    </div> <!-- end of div#films -->
+  </div><!-- end of div#wrapper -->
+</body>
+</html>
