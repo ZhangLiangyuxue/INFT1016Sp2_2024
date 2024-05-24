@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Experiments with CSS</title>
+<style type='text/css'> /* These styles will remove all padding and margins on h1, h2 and p elements, and make the headings red. */
+
+   h1, h2, p {margin: 0 0 0.5em 0;}
+      padding: 0;
+      margin: 0;
+      font: 0.5em/0 Verdana, sans-serif;
+   }
+
+   h1, h2 {
+      color: red;
+   }
+
+</style>
+h1 {font-size: 1.33em;}
+  h2 {font-size: 1.17em;}
+</head>
+<body>
+   <div id="wrapper">
+   <h1>Big page heading</h1>
+   <p class="introduction">This is the introductory paragraph.</p>
+   <p>Another paragraph waffling on about something, my favourite TV show, for three or four sentences.</p>
+
+   <div id="films">
+      <h2><strong>A simple subhead:</strong> Films</h2>
+      <p class='recent'>A short discussion of the last three films I saw.</p>
+      <p>A discussion about my least favourite film</p>
+
+    <div class="movieQuote">
+       <blockquote>
+         <p> "May the Force be with you." </p>
+         <p class="source">XXX</p>
+      </blockquote>
+    </div> <!-- end of movieQuote div -->
+   </div> <!-- end of div#films -->
+   </div><!-- end of div#wrapper -->
+</body>
+
+</html>
