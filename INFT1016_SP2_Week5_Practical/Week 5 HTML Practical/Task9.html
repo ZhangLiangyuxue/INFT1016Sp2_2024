@@ -1,0 +1,169 @@
+<html>
+  <head></head>
+<body>
+  <!-- Basic Version -->
+
+  <table>
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+    </tbody>
+  </table>
+
+</body>
+</html>
+<html>
+  <head></head>
+<body>
+  <!-- Borders -->
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+    </tbody>
+  </table>
+
+</body>
+</html>
+<html>
+  <head></head>
+<body>
+  <!-- Cellpadding -->
+
+  <table border="1" cellpadding="5">
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+    </tbody>
+  </table>
+
+</body>
+</html>
+<html>
+  <head></head>
+<body>
+  <!-- Cellspacing -->
+
+  <table border="1" cellspacing="5" cellpadding="5">
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+    </tbody>
+  </table>
+
+</body>
+</html>
+<html>
+  <head></head>
+<body>
+  <!-- Colspans and Rowspans -->
+
+  <table border="1" cellspacing="5" cellpadding="5">
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">a</td>
+        <td colspan="2">b</td>
+        <!-- One cell is missing here, because the cell before it will expand into this column. -->
+      </tr>
+      <tr>
+        <!-- One cell is missing here, because thE cell above is going to expand into it. -->
+        <td>e</td>
+        <td>f</td>
+    </tbody>
+  </table>
+
+</body>
+</html>
+<html>
+  <head></head>
+<body>
+  <!-- Widths -->
+
+  <table border="1" cellspacing="5" cellpadding="5" width="400px">
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- Individual cell widths are being set here. They could be set in any row - the browser will figure it out. -->
+        <td width="20%">a</td>
+        <td width="50%">b</td>
+        <td width="30%">c</td>
+      </tr>
+      <tr>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+    </tbody>
+  </table>
+
+</body>
+</html>
