@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Week 10</title>
+
+    <script>
+        counter = 0;
+
+        function countClicks(element) {
+            counter = counter + 1;
+            var output = 'The link was pressed ' + counter + ' times.';
+            element.innerHTML = output;
+        }
+    </script>
+
+</head>
+<body>
+    <h1>JavaScript Demo</h1>
+    <a href="#" onclick="countClicks(this);">Click me</a>
+    <p id="boxy"></p>
+</body>
+</html>

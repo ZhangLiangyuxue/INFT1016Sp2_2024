@@ -1,0 +1,16 @@
+# Task 3
+
+Zhang Liangyuxue 110419534
+<html lang="en">
+<head>
+  <document.getElementById('box')>
+  <title>Week 10</title>    
+</head>
+<body>
+  <a href="#" onclick="alert('box');">'<li>The link was pressed 1 times.</li>' </a>
+  <h1>JavaScript Demo</h1>
+  <a href="#">The link was pressed 1 times.</a>
+  <p id="box"></p>
+</body>
+</html>
+CSS
