@@ -1,0 +1,101 @@
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(240, 240, 240);
+    --bg-color: rgb(255, 255, 255);
+    --font-color: rgb(0, 0, 0);
+    --heading-color: rgb(0, 0, 128);
+}
+
+[data-theme="dark"] {
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(30, 30, 30);
+    --bg-color: rgb(10, 10, 10);
+    --font-color: rgb(255, 255, 255);
+    --heading-color: rgb(100, 100, 255);
+}
+
+body {
+    font-family: verdana;
+    margin: 0;
+    padding: 0;
+    background-color: cornsilk;
+    color: aquamarine;
+}
+
+header {
+    background-color: lavender;
+    color: darkblue;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color:black;
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: var(--heading-color);
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+    background-color: indianred;
+    border-radius: 8px;
+}
+
+#gallery {
+    text-align: center;
+}
+
+#gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+#gallery p {
+    margin: 10px 0;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    border: none;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--primary-color);
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: cornflowerblue;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
