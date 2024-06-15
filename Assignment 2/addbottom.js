@@ -1,45 +1,76 @@
 // Step 3: Add 2 buttons to change image and description in the gallery section.
-document.addEventListener("DOMContentLoaded", function() {
-    // Write the basic information for robot and binary.
-    const imageInfo = {
-        robot: {
-            src: "robot.jpeg",
-            description: '"Robot at the British Library Science Fiction Exhibition" by BadgerGravling is licensed under CC BY-SA 2.0. To view a copy of this license, visit https://openverse.org/image/19818e1d-d0ee-429f-99ba-1c7fb7740808?q=robots.',
-            alt: "A robot"
-        },
-        binary: {
-            src: "Binary code.jpeg",
-            description: '"Binary code background on blue digital screen. Nubmers one and zero." by Martin Vorel is licensed under CC0 - Public Domain license & Royalty free. To view a copy of license, visit https://libreshot.com/binary-code/.',
-            alt: "A long binary string"
-        }
-    }});
+// Use var function to define variable getElementById, make sure to define the myclick function correctly.
+document.addEventListener("DOMContentLoaded", () => {
+    function changeImage(imageSrc, description, link) {
+        const mainImage = document.getElementById("mainImage");
+        const descriptionElement = document.getElementById("description");
 
-    // Create the window function to change the image, make sure to define the changeImage function correctly.
-    window.changeImage = function(imageKey) {
-        const image = document.getElementById("displayedImage");
-        const description = document.getElementById("imageDescription");
-
-        if (imageInfo[imageKey]) {
-            image.src = imageInfo[imageKey].src;
-            image.alt = imageInfo[imageKey].alt;
-            description.innerHTML = imageInfo[imageKey].description;
-        }
-    };
-
-    // Set default image
-    changeImage('robot.jpeg')
-
-    const themeToggleBtn = document.getElementById("themeToggleBtn");
-    themeToggleBtn.addEventListener("click", function() {
+        mainImage.src = imageSrc;
+        descriptionElement.innerHTML = `"${description}" is licensed under CC BY-SA 2.0. To view a copy of this license, visit <a href="${link}">this link</a>.`;
+    }
+    // Write function toggleTheme() to change different colot theme.
+    function toggleTheme() {
         const currentTheme = document.documentElement.getAttribute("data-theme");
         const newTheme = currentTheme === "dark" ? "light" : "dark";
         document.documentElement.setAttribute("data-theme", newTheme);
-    });
-
-    function displayDateTime() {
-        const now = new Date();
-        const dateTimeString = now.toLocaleString();
-        document.getElementById("dateTime").textContent = dateTimeString;
+        localStorage.setItem('theme', newTheme);
     }
 
-    displayDateTime();
+    document.getElementById('themeToggleBtn').addEventListener('click', toggleTheme);
+    //Step 6: Write function applyStoredTheme() to read the theme preferences from local storage, then apply it when the pages loads on html.
+    function applyStoredTheme() {
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            document.documentElement.setAttribute("data-theme", storedTheme);
+        }
+    }
+    //Step4: Display the current date and time with function updateTime
+    function updateTime() {
+        document.getElementById('dateTime').innerText = new Date().toLocaleString();
+    }
+    // Call updateTime function.
+    updateTime();
+    // Update time dynamically
+    setInterval(updateTime, 1000);
+
+    // Write the submit form 
+    function submitForm(event) {
+        event.preventDefault();
+        const userName = document.getElementById('userName').value;
+        window.location.search = `?userName=${userName}`;
+    }
+
+    document.getElementById('nameForm').addEventListener('submit', submitForm);
+
+    // Call defined functions.
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    displayGreeting();
+    // Call updateTime function.
+    updateTime();
+    // Update time dynamically
+    setInterval(updateTime, 1000);
+    //Step5: Create dynamic update heading
+    //Write the displayGreeting function for searching in html web.
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('username')
+    }
+    // update the heading with the user's name dynamically.
+    function updateHeading() {
+        const userName = getQueryParams();
+        if (userName) {
+            const header = document.getElementById('header');
+            header.innerText = `Hello, ${userName}`;
+        }
+    }
+
+    window.onload = function(){
+        applyStoredTheme();
+        updateHeading();
+    };
+
+    applyStoredTheme();
+    updateHeading();
+}); 
