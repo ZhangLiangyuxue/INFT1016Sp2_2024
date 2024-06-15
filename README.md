@@ -1,9 +1,15 @@
 Step 2:
 
-Use the sample web page that provided to create my first year university personal website as the home page. Change the file name as First year University.
+Use the sample web page to create my first-year university personal website as the home page. Change the file name to First-year University.
 
-First, create a list at sample web page
+Add the navigation menu with links to different sections on home page. 
+
+First, create a list on the sample web page, which is relative to the first-year courses currently. Then add the course links to the list.
+
 
 
 Step 3:
-Add interactive buttons to change image and description in the gallery section.
+Add interactive buttons to change images and descriptions in the gallery section.
+
+Sources: (Include links and images)
+
