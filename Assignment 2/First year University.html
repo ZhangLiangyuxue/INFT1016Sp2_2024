@@ -5,52 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>	Zhang Liangyuxue INFT Final Assessment </title>    
     <link rel="stylesheet" href="base.css">
-    <script defer src="addbottom.js"></script>    
-</head>  
+    <script defer src="addbottom.js"></script>   
+</head>
 
-<body>    
+<body data-theme="light">    
     <header> 
-        <h1 style="font-size: 75px; color: seagreen;"> My first year in Univeristy of South Australia </h1>   
-        <nav> 
+        <h1 style="font-size: 75px; color: seagreen;"> My first year in Univeristy of South Australia </h1>
+        <button id="themeToggleBtn">Toggle Theme</button>      
             <ul>  
-                <li><a href="#">Home</a></li>        
+                <li><a href="First year University.html">Home</a></li>        
                 <li><a href="courses.html">Courses</a></li>        
-                <li><a href="#gallery">To Do Tasks</a></li>           
-            </ul>
-        <button onclick="">Toggle Theme</button></header>         
-        <form><input type="text" name="user_name" placeholder="Enter your name!"> <button type="submit">Apply!</form></button></nav>        
+                <li><a href="Todotasks.html">To Do Tasks</a></li>           
+            </ul>         
+        <form id="nameForm" onsubmit="submitForm(event)">
+            <input type="text" name="user_name" placeholder="Enter your name!"> 
+            <button type="submit">Apply!</button>
+        </form>       
     </header>
 
-<main>
-    <section id="gallery">
-       <h2>To Do Tasks</h2> 
-       <img id="displayImage" src="https://lo.unisa.edu.au/pluginfile.php/4459733/mod_book/chapter/404441/5970254789_cb92742d19_w.jpg" alt="openverse.org" width="200" height="150">
-       <p id="imageDescription">"Robot at the British Library Science Fiction Exhibition" by BadgerGravling is licensed under CC BY-SA 2.0. To view a copy of this license, visit https://openverse.org/image/19818e1d-d0ee-429f-99ba-1c7fb7740808?q=robots.</p>
-       <button onclick="changeImage('robot')">A robot</button>
-       <button onclick="changeImage('Binary code')">A long binary string</button>
-    </section>
-    <button id="themeToggleBtn">Toggle Theme</button>
-</main>
+    <main>
+        <article>
+            <h2><center id="header">Gallery</center></h2> 
+            <img id="mainImage" src="robot.jpeg" alt="Default Image" class="responsive-img">
+            <p id="description">"Robot at the British Library Science Fiction Exhibition" by BadgerGravling is licensed under CC BY-SA 2.0. To view a copy of this license, visit <a href="https://openverse.org/image/19818e1d-d0ee-429f-99ba-1c7fb7740808?q=robots">this link</a>.</p>
 
-<h2>Gallery</h2>        
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>        
-
-<h3>Subsection</h3>        
-<p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>        
-
-<p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>        
-
-<h3>Another subsection</h3> <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>        
-
-<p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>      
-</main>      
-
-
-<footer>   
-    <p id="dateTime"></p>
-    <p>©Copyright 20XX by <Inset your name> All rights reversed.</p>    
-</footer>  
-
+            <h3>Choose an Image:</h3>
+            <button onclick="changeImage('robot.jpeg', 'Robot at the British Library Science Fiction Exhibition', 'https://lo.unisa.edu.au/pluginfile.php/4459733/mod_book/chapter/404441/5970254789_cb92742d19_w.jpg')">Robot</button>
+            <button onclick="changeImage('Binary code.jpeg', 'Binary code background on blue digital screen. Numbers one and zero.', 'https://libreshot.com/wp-content/uploads/2016/07/binary-code.jpg')">binary-code</button>  
+        </article>  
+    </main>
+    <footer>   
+        <p id="dateTime"></p>
+        <p>©Copyright 2024 by Liangyuxue Zhang All rights reversed.</p>    
+    </footer>  
 </body>
 </html>
 
