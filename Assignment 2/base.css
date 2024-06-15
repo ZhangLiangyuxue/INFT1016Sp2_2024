@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #cccccc;
+    --bg-color: #f0f0f0;
+    --font-color: #000000;
+    --heading-color: #333333;
+}
+
+[data-theme="dark"] {
+    --primary-color: #000000;
+    --secondary-color: #444444;
+    --bg-color: #1a1a1a;
+    --font-color: #ffffff;
+    --heading-color: #cccccc;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1em;
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+}
+
+button {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+}
+
+.visible {
+    display: block;
+}
+
+.myimage {
+    display: none;
+    max-width: 100%;
+}
