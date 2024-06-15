@@ -28,6 +28,7 @@ Include a dynamic titie that welcomes the user by using their name.
 Users can change the light theme and dark theme by clicking the button Toggle Theme.
 The user name and theme preferences are stored using localStorage.
 
+## Features
 ## Gallery
 Display different images and descriptions.
 Users can switch different images and descriptions.
