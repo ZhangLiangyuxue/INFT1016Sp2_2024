@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>    
+<title> To Do Tasks </title> 
+<link rel="stylesheet" href="styles.css">
+<script defer src="todo.js"></script>
+</head>
+<body>
+    <h1 style="font-size: 50px; color:rgb(14, 224, 239);">To-Do List</h1>
+    <div id="login">
+        <p>Enter the password to log on the to-do list:</p>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="passwordMessage"></p>
+    </div>
+    <div id="todoContainer" style="display: none;">
+        <input type="text" id="newTodo" placeholder="Enter a new task">
+        <button onclick="addTodo()">Add</button>
+        <ul id="todolist"></ul>
+        <button onclick="saveTodos()">Save List</button>
+        <button onclick="loadTodos()">Load List</button>
+    </div>
+</body>
+</html>
